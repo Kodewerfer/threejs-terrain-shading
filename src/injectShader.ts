@@ -6,23 +6,23 @@ import GUI from "lil-gui";
 
 export default function injectShaderCode(targetMaterial: THREE.MeshStandardMaterial, textureLoader: TextureLoader, gui: GUI, textureScaling = 15.0) {
     // set 2
-    const baseColorTexture2 = textureLoader.load("./static/terrainMaps/set2/Desert_Western_Ground_Gravel_Rock_vefmeccn_1K_BaseColor.jpg");
+    const baseColorTexture2 = textureLoader.load("terrainMaps/set2/Desert_Western_Ground_Gravel_Rock_vefmeccn_1K_BaseColor.jpg");
     baseColorTexture2.colorSpace = THREE.SRGBColorSpace;
     makeTextureRepeat(baseColorTexture2);
     
-    const normalMapTexture2 = textureLoader.load("./static/terrainMaps/set2/Desert_Western_Ground_Gravel_Rock_vefmeccn_1K_Normal.jpg");
+    const normalMapTexture2 = textureLoader.load("terrainMaps/set2/Desert_Western_Ground_Gravel_Rock_vefmeccn_1K_Normal.jpg");
     makeTextureRepeat(normalMapTexture2);
     
-    const aoMapTexture2 = textureLoader.load("./static/terrainMaps/set2/Desert_Western_Ground_Gravel_Rock_vefmeccn_1K_AO.jpg");
+    const aoMapTexture2 = textureLoader.load("terrainMaps/set2/Desert_Western_Ground_Gravel_Rock_vefmeccn_1K_AO.jpg");
     makeTextureRepeat(aoMapTexture2, textureScaling);
     
     
     // noise
-    const perlinTexture = textureLoader.load("./static/perlin-1k.png");
+    const perlinTexture = textureLoader.load("perlin-1k.png");
     perlinTexture.wrapT = THREE.RepeatWrapping;
     perlinTexture.wrapS = THREE.RepeatWrapping;
     
-    const perlinFineTexture = textureLoader.load("./static/perlin-fine-1k.png");
+    const perlinFineTexture = textureLoader.load("perlin-fine-1k.png");
     perlinFineTexture.wrapT = THREE.RepeatWrapping;
     perlinFineTexture.wrapS = THREE.RepeatWrapping;
     

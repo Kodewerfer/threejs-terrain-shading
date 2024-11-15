@@ -6,39 +6,39 @@ import GUI from "lil-gui";
 
 export default function injectShaderSplattingMap(targetMaterial: THREE.MeshStandardMaterial, textureLoader: TextureLoader, gui: GUI, textureScaling = 15.0) {
     // set 2
-    const baseColorTexture2 = textureLoader.load("./static/terrainMaps/set2/Desert_Western_Ground_Gravel_Rock_vefmeccn_1K_BaseColor.jpg");
+    const baseColorTexture2 = textureLoader.load("terrainMaps/set2/Desert_Western_Ground_Gravel_Rock_vefmeccn_1K_BaseColor.jpg");
     baseColorTexture2.colorSpace = THREE.SRGBColorSpace;
     makeTextureRepeat(baseColorTexture2);
     
-    const normalMapTexture2 = textureLoader.load("./static/terrainMaps/set2/Desert_Western_Ground_Gravel_Rock_vefmeccn_1K_Normal.jpg");
+    const normalMapTexture2 = textureLoader.load("terrainMaps/set2/Desert_Western_Ground_Gravel_Rock_vefmeccn_1K_Normal.jpg");
     makeTextureRepeat(normalMapTexture2);
     
-    const aoMapTexture2 = textureLoader.load("./static/terrainMaps/set2/Desert_Western_Ground_Gravel_Rock_vefmeccn_1K_AO.jpg");
+    const aoMapTexture2 = textureLoader.load("terrainMaps/set2/Desert_Western_Ground_Gravel_Rock_vefmeccn_1K_AO.jpg");
     makeTextureRepeat(aoMapTexture2, textureScaling);
     
     
     // set 3
-    const baseColorTexture3 = textureLoader.load("./static/terrainMaps/set3/Gravel_Ground_ukxmbcscw_1K_BaseColor.jpg");
+    const baseColorTexture3 = textureLoader.load("terrainMaps/set3/Gravel_Ground_ukxmbcscw_1K_BaseColor.jpg");
     baseColorTexture3.colorSpace = THREE.SRGBColorSpace;
     makeTextureRepeat(baseColorTexture3);
     
-    const normalMapTexture3 = textureLoader.load("./static/terrainMaps/set3/Gravel_Ground_ukxmbcscw_1K_Normal.jpg");
+    const normalMapTexture3 = textureLoader.load("terrainMaps/set3/Gravel_Ground_ukxmbcscw_1K_Normal.jpg");
     makeTextureRepeat(normalMapTexture3);
     
-    const aoMapTexture3 = textureLoader.load("./static/terrainMaps/set3/Gravel_Ground_ukxmbcscw_1K_AO.jpg");
+    const aoMapTexture3 = textureLoader.load("terrainMaps/set3/Gravel_Ground_ukxmbcscw_1K_AO.jpg");
     makeTextureRepeat(aoMapTexture3, textureScaling);
     
     
     // noise
-    const perlinFineTexture = textureLoader.load("./static/perlin-fine-1k.png");
+    const perlinFineTexture = textureLoader.load("perlin-fine-1k.png");
     perlinFineTexture.wrapT = THREE.RepeatWrapping;
     perlinFineTexture.wrapS = THREE.RepeatWrapping;
     
     // splatting map
-    const mat2Map = textureLoader.load("./static/Landscape-flat_Terrain_mat2.png");
+    const mat2Map = textureLoader.load("Landscape-flat_Terrain_mat2.png");
     mat2Map.flipY = false;
     
-    const mat3Map = textureLoader.load("./static/Landscape-flat_Terrain_mat3.png");
+    const mat3Map = textureLoader.load("Landscape-flat_Terrain_mat3.png");
     mat3Map.flipY = false;
     
     const demoUniforms = {

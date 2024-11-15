@@ -40,7 +40,7 @@ import injectShaderSplattingMap from "./injectShader-splattingMap.ts";
     const mainScene = new THREE.Scene();
     
     const rgbeLoader = new RGBELoader()
-    rgbeLoader.load('./static/aristea_wreck_1k.hdr', (environmentMap: any) => {
+    rgbeLoader.load('aristea_wreck_1k.hdr', (environmentMap: any) => {
         environmentMap.mapping = THREE.EquirectangularReflectionMapping
         
         // mainScene.background = environmentMap
@@ -131,11 +131,11 @@ function makeTerrainAndAdd(scene: Scene, textureLoader: TextureLoader, camera: T
     
     camera.position.set(80, 30, -205);
     
-    const TerrainAlphaTexture = textureLoader.load("./static/Landscape_Terrain_PBR_Alpha.png");
+    const TerrainAlphaTexture = textureLoader.load("Landscape_Terrain_PBR_Alpha.png");
     TerrainAlphaTexture.flipY = false;
     
     const gltfLoader = new GLTFLoader();
-    gltfLoader.load("./static/Terrain-bare.glb", (gltf) => {
+    gltfLoader.load("Terrain-bare.glb", (gltf) => {
         let mesh = gltf.scene.children[0] as Mesh;
         // Notice: this mesh already had tangent computed in blender
         
@@ -191,14 +191,14 @@ function makePlaneAndAdd(scene: Scene, textureLoader: TextureLoader, camera: THR
 
 // utils
 function loadPrimaryTextures(textureLoader: TextureLoader) {
-    const baseColorTexture = textureLoader.load("./static/terrainMaps/Canyon_Rocky_Ground_vbooeagg_1K_BaseColor.jpg");
+    const baseColorTexture = textureLoader.load("terrainMaps/Canyon_Rocky_Ground_vbooeagg_1K_BaseColor.jpg");
     baseColorTexture.colorSpace = THREE.SRGBColorSpace;
     makeTextureRepeat(baseColorTexture);
     
-    const aoMapTexture = textureLoader.load("./static/terrainMaps/Canyon_Rocky_Ground_vbooeagg_1K_AO.jpg");
+    const aoMapTexture = textureLoader.load("terrainMaps/Canyon_Rocky_Ground_vbooeagg_1K_AO.jpg");
     makeTextureRepeat(aoMapTexture, 15);
     
-    const normalMapTexture = textureLoader.load("./static/terrainMaps/Canyon_Rocky_Ground_vbooeagg_1K_Normal.jpg");
+    const normalMapTexture = textureLoader.load("terrainMaps/Canyon_Rocky_Ground_vbooeagg_1K_Normal.jpg");
     makeTextureRepeat(normalMapTexture);
     
     return {
