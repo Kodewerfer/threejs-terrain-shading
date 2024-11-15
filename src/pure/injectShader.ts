@@ -188,7 +188,7 @@ export default function injectShaderCode(targetMaterial: THREE.MeshStandardMater
                 vec3 normalM2 = textureNoTile(uNormalMap2, uNoiseFine, scaledUV);
                 
                 vec3 normalMX = mixDepthBased(vec4(normalM1, 1.0-perlinValue), vec4(normalM2, perlinValue));
-                normalMX*= 2.0-1.0;
+                normalMX= normalMX * 2.0-1.0;
             
                 #ifdef USE_TANGENT
                     normal = normalize(tbn * normalMX);

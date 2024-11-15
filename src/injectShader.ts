@@ -214,7 +214,7 @@ export default function injectShaderCode(targetMaterial: THREE.MeshStandardMater
                 if(!uMixSecondTexture){
                     normalMX=normalM1;
                 }
-                normalMX*= 2.0-1.0;
+                normalMX= normalMX* 2.0-1.0;
             
                 #ifdef USE_TANGENT
                     normal = normalize(tbn * normalMX);
