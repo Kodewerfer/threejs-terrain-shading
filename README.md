@@ -1,12 +1,12 @@
 # Proof of concept - Threejs terrain shading
 
 ### From
-[Imgur](https://imgur.com/UevkJ7C.png)
-[Imgur](https://imgur.com/q3MEN7U.png)
+<img src="https://imgur.com/UevkJ7C.png" width="350"> 
+<img src="https://imgur.com/q3MEN7U.png" width="350">
 
 ## To
-[Imgur](https://imgur.com/vsdRFHw.png)
-[Imgur](https://imgur.com/3hgxFZq.png)
+<img src="https://imgur.com/vsdRFHw.png" width="350">
+<img src="https://imgur.com/3hgxFZq.png" width="350">
 
 ## Description
 
